@@ -1,0 +1,17 @@
+---
+title: "Example"
+date: \today
+author: "Tanmay"
+link-citations: true
+urlcolor: "blue"
+linkReferences: true
+figPrefix:
+    - "Figure."
+    - "Figures."
+eqnPrefix:
+    - "Eqn."
+    - "Eqns."
+tblPrefix:
+    - "Table."
+    - "Tables."
+---
