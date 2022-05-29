@@ -6,4 +6,6 @@ html:
 	./build.sh html
 docx:
 	./build.sh docx
-all: pdf html docx
+tex:
+	./build.sh tex
+all: pdf html docx tex
