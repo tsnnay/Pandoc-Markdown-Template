@@ -55,6 +55,21 @@ html() {
     cp -r "${SOURCEDIR}/img" "${BUILDDIR}/html/"
 }
 
+docx() {
+    mkdir "${BUILDDIR}/docx" -p
+    echo "Creating docx output"
+    pandoc "${SOURCEDIR}"/*.md \
+        --resource-path="${SOURCEDIR}" \
+        --filter=pandoc-crossref \
+        --citeproc \
+        --csl="${CSLDIR}/citation-style.csl" \
+        --output="${BUILDDIR}/docx/output.docx" \
+        --number-sections \
+        --verbose \
+        2>pandoc.docx.log
+}
+
+
 # Allows to call a function based on arguments passed to the script
 # Example: `./build.sh pdf_print`
 $*
