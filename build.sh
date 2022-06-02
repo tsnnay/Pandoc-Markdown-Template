@@ -3,7 +3,6 @@
 SOURCEDIR="src"
 BUILDIR="build"
 STYLEDIR="style"
-BIBDIR="src/ref"
 BUILDDIR="build"
 
 download_csl() {
@@ -15,6 +14,7 @@ pdf() {
     mkdir "${BUILDDIR}/pdf" -p
     echo "Creating pdf-print output"
     pandoc "${SOURCEDIR}"/*.md \
+        "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
         --filter=pandoc-crossref \
         --filter=pandoc-shortcaption \
@@ -36,9 +36,10 @@ html() {
     mkdir "${BUILDDIR}/html" -p
     echo "Creating html-print output"
     pandoc "${SOURCEDIR}"/*.md \
+        "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
-        --template="${STYLEDIR}/template.html" \
         --include-in-header="${STYLEDIR}/style.css" \
+        --template="${STYLEDIR}/template.html" \
         --toc \
         --filter=pandoc-crossref \
         --citeproc \
@@ -60,6 +61,7 @@ docx() {
     mkdir "${BUILDDIR}/docx" -p
     echo "Creating docx output"
     pandoc "${SOURCEDIR}"/*.md \
+        "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
         --filter=pandoc-crossref \
         --citeproc \
@@ -74,6 +76,7 @@ tex() {
     mkdir "${BUILDDIR}/tex" -p
     echo "Creating tex file"
     pandoc "${SOURCEDIR}"/*.md \
+        "${SOURCEDIR}"/meta.yml \
         --template="${STYLEDIR}/template/template.tex" \
         --include-in-header="${STYLEDIR}/preamble.tex" \
         --resource-path="${SOURCEDIR}" \

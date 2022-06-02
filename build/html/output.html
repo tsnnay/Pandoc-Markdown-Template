@@ -227,6 +227,139 @@
       margin-left: 2em;
     }
   </style>
+  <style>
+  body {
+      font-family: Georgia;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 30px;
+      font-size: 18px;
+      padding-left: 350px;
+      padding-right: 50px;
+      color: #111;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: Arial;
+  }
+
+  h1 {
+      padding-top: 200px;
+      line-height: 50px;
+  }
+  h2 {
+      padding-top: 30px;
+  }
+  h3 {
+      padding-top: 20px;
+  }
+  h4 {
+      padding-top: 10px;
+  }
+  p {
+      text-align: justify;
+  }
+  p a {
+      word-wrap: break-word;
+      white-space: pre;
+  }
+  code {
+      word-wrap: break-word;
+  }
+  blockquote {
+      border-left: 3px solid #eee;
+      margin-left: 20px;
+      padding-left: 20px;
+  }
+
+  ::selection {
+      background-color: #E4E4E4;
+  }
+
+  table {
+      width: 100%;
+  }
+  table caption {
+      font-weight: bold;
+  }
+  table tr {
+      padding: 0;
+      margin: 0;
+      background-color: #f0f0f0;
+  }
+  table tr.even {
+      background-color: #fafafa;
+  }
+  table td {
+      margin: 0;
+      padding: 3px 5px;
+  }
+
+  p span.added {
+      color: green;
+      background-color: #FFF3C5;
+  }
+  p span.removed {
+      color: red;
+      background-color: #FFF3C5;
+  }
+
+  #title-page {
+      padding: 80px 0;
+  }
+
+  #TOC {
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: scroll;
+      height: 100%;
+      background: #fafafa;
+      max-width: 300px;
+      font-family: Arial;
+      font-size: 15px;
+      line-height: 30px;
+  }
+  ::-webkit-scrollbar {
+      width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+      background-color: #ECECEC;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: #B0B0B0;
+      border-radius: 8px;
+  }
+  #TOC > ul {
+      padding-right: 10px;
+  }
+  #TOC ul {
+      list-style: none;
+      padding-left: 20px;
+  }
+  #TOC ul li a {
+      text-decoration: none;
+      color: #364149;
+      text-overflow: ellipsis;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  #TOC ul li a:hover {
+      color: #008cff;
+  }
+
+  .figure {
+      text-align: center;
+  }
+  .figure p {
+      text-align: center;
+      font-style: italic;
+  }
+  .figure img {
+        width: 100%;
+  }
+  </style>
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
@@ -239,12 +372,25 @@
 <h1 class="title">Example</h1>
 <p class="author">Tanmay</p>
 </header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#sec:ImageSection"><span
+class="toc-section-number">1</span> Image</a></li>
+<li><a href="#sec:EquationExample"><span
+class="toc-section-number">2</span> Equation</a></li>
+<li><a href="#sec:PythonCode"><span class="toc-section-number">3</span>
+Source Code</a></li>
+<li><a href="#sec:TableExample"><span
+class="toc-section-number">4</span> Table</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</nav>
 <h1 data-number="1" id="sec:ImageSection"><span
 class="header-section-number">1</span> Image</h1>
 <figure>
 <img src="img/800x400.png" id="fig:FigureRef"
-alt="Figure 1: Description " />
-<figcaption aria-hidden="true">Figure 1: Description </figcaption>
+alt="Figure 1: Description" />
+<figcaption aria-hidden="true">Figure 1: Description</figcaption>
 </figure>
 <p>Seen in Figure. <a href="#fig:FigureRef">1</a>, lorem ipsum dolor sit
 amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
