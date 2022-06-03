@@ -1,7 +1,7 @@
 ---
 title: "Example"
-date: \today
 author: "Tanmay"
+date: \today
 bibliography: ["bibliography.bib"]
 ---
 # Image {#sec:ImageSection}
