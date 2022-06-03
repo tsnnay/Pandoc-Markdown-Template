@@ -1,0 +1,70 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "pandoc.htmlOptString": "--filter=C:\\Users\\1833097\\Miniconda3\\envs\\pandoc-env\\Library\\bin\\pandoc-crossref.exe",
+    "markdown-preview-enhanced.mermaidTheme": "dark",
+    "markdown-preview-enhanced.previewTheme": "monokai.css",
+    "markdown.extension.math.enabled": false,
+    "pandoc.docxOptString": "--filter=C:\\Users\\1833097\\Miniconda3\\envs\\pandoc-env\\Library\\bin\\pandoc-crossref.exe",
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
+    "grammarly.dialect": "british",
+    "grammarly.domain": "academic",
+    "grammarly.goals": [
+    "describe"
+    ],
+    "grammarly.showExamples": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "files.autoSave": "afterDelay",
+    "markdown-preview-enhanced.pandocArguments": [
+
+
+
+    "--filter=C:/Users/1833097/Miniconda3/envs/pandoc-env/Library/bin/pandoc-crossref.exe",
+    "--metadata-file=meta.yml"
+
+    
+    ],
+    "redhat.telemetry.enabled": false,
+    "vscode-office.autoTheme": true,
+    "workbench.editorAssociations": [{
+        "viewType": "default",
+        "filenamePattern": "*.md"
+    }
+],
+"markdown-preview-enhanced.enableEmojiSyntax": false,
+"markdown-preview-enhanced.pandocMarkdownFlavor": "markdown-raw_tex+tex_math_dollars+tex_math_single_backslash",
+"markdown.extension.print.theme": "dark",
+"mdmath.theme": "publication",
+"python.defaultInterpreterPath": "C:\\Users\\1833097\\Miniconda3\\python.exe",
+"editor.minimap.enabled": false,
+"markdown.preview.breaks": true,
+"markdown-preview-enhanced.mathBlockDelimiters": [
+
+    [
+        "$$",
+        "$$"
+    ],
+    [
+        "\\[",
+        "\\]"
+    ]
+],
+"markdown-preview-enhanced.puppeteerArgs": [
+
+],
+"jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+],
+"explorer.confirmDelete": false,
+"hediet.vscode-drawio.theme": "Kennedy",
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"markdown-preview-enhanced.pandocPath": "C:\\Users\\1833097\\Miniconda3\\envs\\pandoc-env\\Library\\bin\\pandoc.exe",
+"markdown-preview-enhanced.usePandocParser": true,
+"markdown-preview-enhanced.mathRenderingOption": "MathJax",
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+"jupyter.askForKernelRestart": false
+}
