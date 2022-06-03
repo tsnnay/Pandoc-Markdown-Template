@@ -38,7 +38,7 @@ html() {
     pandoc "${SOURCEDIR}"/*.md \
         "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
-        --css="${STYLEDIR}/pandoc.css" \
+        --include-in-header="${STYLEDIR}/style.css" \
         --toc \
         --filter=pandoc-crossref \
         --citeproc \
@@ -54,6 +54,7 @@ html() {
     rm -rf "${BUILDDIR}/html/img"
     mkdir "${BUILDDIR}/html/img"
     cp -r "${SOURCEDIR}/img" "${BUILDDIR}/html/"
+    start build/html/output.html
 }
 
 docx() {

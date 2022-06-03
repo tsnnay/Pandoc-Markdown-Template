@@ -7,6 +7,137 @@
   <meta name="author" content="Tanmay" />
   <title>Example</title>
   <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -96,7 +227,139 @@
       margin-left: 2em;
     }
   </style>
-  <link rel="stylesheet" href="style/pandoc.css" />
+  <style>
+  body {
+      font-family: Georgia;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 30px;
+      font-size: 18px;
+      padding-left: 350px;
+      padding-right: 50px;
+      color: #111;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: Arial;
+  }
+
+  h1 {
+      padding-top: 200px;
+      line-height: 50px;
+  }
+  h2 {
+      padding-top: 30px;
+  }
+  h3 {
+      padding-top: 20px;
+  }
+  h4 {
+      padding-top: 10px;
+  }
+  p {
+      text-align: justify;
+  }
+  p a {
+      word-wrap: break-word;
+      white-space: pre;
+  }
+  code {
+      word-wrap: break-word;
+  }
+  blockquote {
+      border-left: 3px solid #eee;
+      margin-left: 20px;
+      padding-left: 20px;
+  }
+
+  ::selection {
+      background-color: #E4E4E4;
+  }
+
+  table {
+      width: 100%;
+  }
+  table caption {
+      font-weight: bold;
+  }
+  table tr {
+      padding: 0;
+      margin: 0;
+      background-color: #f0f0f0;
+  }
+  table tr.even {
+      background-color: #fafafa;
+  }
+  table td {
+      margin: 0;
+      padding: 3px 5px;
+  }
+
+  p span.added {
+      color: green;
+      background-color: #FFF3C5;
+  }
+  p span.removed {
+      color: red;
+      background-color: #FFF3C5;
+  }
+
+  #title-page {
+      padding: 80px 0;
+  }
+
+  #TOC {
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: scroll;
+      height: 100%;
+      background: #fafafa;
+      max-width: 300px;
+      font-family: Arial;
+      font-size: 15px;
+      line-height: 30px;
+  }
+  ::-webkit-scrollbar {
+      width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+      background-color: #ECECEC;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: #B0B0B0;
+      border-radius: 8px;
+  }
+  #TOC > ul {
+      padding-right: 10px;
+  }
+  #TOC ul {
+      list-style: none;
+      padding-left: 20px;
+  }
+  #TOC ul li a {
+      text-decoration: none;
+      color: #364149;
+      text-overflow: ellipsis;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+  }
+  #TOC ul li a:hover {
+      color: #008cff;
+  }
+
+  .figure {
+      text-align: center;
+  }
+  .figure p {
+      text-align: center;
+      font-style: italic;
+  }
+  .figure img {
+        width: 100%;
+  }
+  </style>
   <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
   type="text/javascript"></script>
@@ -146,7 +409,7 @@ f(a)=\frac{1}{2πi}∮_γ\frac{f(z)}{z-a}\,dz
 <p>As seen in Eqn. <a href="#eq:EquationRef">1</a>, duis aute irure
 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.</p>
+culpa qui officia deserunt mollit anim id est laboru.</p>
 <h1 data-number="3" id="sec:PythonCode"><span
 class="header-section-number">3</span> Source Code</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
