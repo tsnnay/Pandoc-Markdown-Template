@@ -12,7 +12,7 @@ download_csl() {
 }
 pdf() {
     mkdir "${BUILDDIR}/pdf" -p
-    echo "Creating pdf-print output"
+    echo "Printing output.pdf"
     pandoc "${SOURCEDIR}"/*.md \
         "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
@@ -34,7 +34,7 @@ pdf() {
 
 html() {
     mkdir "${BUILDDIR}/html" -p
-    echo "Creating html-print output"
+    echo "Creating output.html"
     pandoc "${SOURCEDIR}"/*.md \
         "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
@@ -58,7 +58,7 @@ html() {
 
 docx() {
     mkdir "${BUILDDIR}/docx" -p
-    echo "Creating docx output"
+    echo "Creating output.docx"
     pandoc "${SOURCEDIR}"/*.md \
         "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
