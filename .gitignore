@@ -1,5 +1,5 @@
-build/*
 *.docx
+*.pdf
 *.log
 ## Core latex/pdflatex auxiliary files:
 *.aux
