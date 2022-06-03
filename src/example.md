@@ -4,7 +4,6 @@ date: \today
 author: "Tanmay"
 bibliography: ["bibliography.bib"]
 ---
-
 # Image {#sec:ImageSection}
 
 ![Description](img/800x400.png){#fig:FigureRef}

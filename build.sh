@@ -38,8 +38,7 @@ html() {
     pandoc "${SOURCEDIR}"/*.md \
         "${SOURCEDIR}"/meta.yml \
         --resource-path="${SOURCEDIR}" \
-        --include-in-header="${STYLEDIR}/style.css" \
-        --template="${STYLEDIR}/template.html" \
+        --css="${STYLEDIR}/pandoc.css" \
         --toc \
         --filter=pandoc-crossref \
         --citeproc \
