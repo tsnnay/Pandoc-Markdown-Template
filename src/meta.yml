@@ -1,4 +1,7 @@
 ---
+title: "Example"
+author: "Tanmay"
+bibliography: "bibliography.bib"
 date: \today
 link-citations: true
 urlcolor: "blue"

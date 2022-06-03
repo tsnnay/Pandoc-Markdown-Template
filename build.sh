@@ -54,7 +54,6 @@ html() {
     rm -rf "${BUILDDIR}/html/img"
     mkdir "${BUILDDIR}/html/img"
     cp -r "${SOURCEDIR}/img" "${BUILDDIR}/html/"
-    start build/html/output.html
 }
 
 docx() {
